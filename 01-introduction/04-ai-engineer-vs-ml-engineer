@@ -1,0 +1,2632 @@
+# AI Engineer vs ML Engineer
+
+> AI Engineer dan Machine Learning Engineer memiliki banyak kemampuan dan tanggung jawab yang saling beririsan. Perbedaan utamanya biasanya terdapat pada fokus pekerjaan: AI Engineer cenderung lebih luas pada pembangunan aplikasi dan sistem berbasis AI, sedangkan ML Engineer lebih berfokus pada pengembangan, productionization, deployment, dan operasi sistem machine learning.
+>
+> Namun, nama jabatan tidak memiliki definisi universal. Di dunia kerja nyata, tanggung jawab kedua role dapat sangat berbeda antar perusahaan.
+
+---
+
+# 1. Overview
+
+Dua role yang sering dianggap sama adalah:
+
+```text
+AI Engineer
+Machine Learning Engineer
+```
+
+Keduanya membutuhkan kemampuan seperti:
+
+- Programming
+- Python
+- Machine Learning
+- Data
+- Software Engineering
+- API
+- Deployment
+- Cloud
+- Testing
+
+Karena itu sangat wajar jika terdapat overlap.
+
+Gambaran sederhana:
+
+```text
+AI Engineer
+       │
+       │  AI Applications
+       │  LLM
+       │  RAG
+       │  Agents
+       │  Integration
+       │
+       ├───────────────┐
+       │               │
+       ↓               ↓
+ Machine Learning   Software Engineering
+       ↑
+       │
+       │  Training
+       │  Evaluation
+       │  Deployment
+       │  MLOps
+       │
+ML Engineer
+```
+
+Diagram di atas bukan definisi mutlak.
+
+Lebih tepat menganggap AI Engineer dan ML Engineer sebagai dua area yang **overlap**, dengan penekanan yang berbeda.
+
+---
+
+# 2. What is an AI Engineer?
+
+AI Engineer adalah engineer yang membangun aplikasi atau sistem yang memanfaatkan teknologi Artificial Intelligence.
+
+Fokusnya dapat mencakup:
+
+```text
+AI Model
+    +
+Application
+    +
+Integration
+    +
+Infrastructure
+```
+
+Dalam AI Engineering modern, seorang AI Engineer dapat bekerja dengan:
+
+- Machine Learning
+- Deep Learning
+- LLM
+- Generative AI
+- Embeddings
+- RAG
+- AI Agents
+- Function Calling
+- APIs
+- Databases
+- Cloud
+- Deployment
+- Monitoring
+
+Microsoft menjelaskan AI Engineer sebagai role yang menggabungkan software development, programming, data science, dan data engineering, serta dapat mencakup pembuatan dan pengujian model lalu menggunakan API atau embedded code untuk membangun aplikasi AI. [1]
+
+---
+
+# 3. What is a Machine Learning Engineer?
+
+Machine Learning Engineer adalah engineer yang berfokus pada pengembangan dan pengoperasian sistem machine learning, terutama bagaimana model dapat bekerja secara reliable dan scalable di production.
+
+Fokus utamanya dapat meliputi:
+
+```text
+Data
+ ↓
+Model
+ ↓
+Training
+ ↓
+Evaluation
+ ↓
+Deployment
+ ↓
+Monitoring
+ ↓
+Optimization
+```
+
+Google Cloud menggambarkan ML Engineer sebagai role yang mengembangkan teknik dan model ML, kemudian mengoperasionalkan dan menskalakan model tersebut untuk deployment. [2]
+
+Google Cloud juga menempatkan ML Engineer sebagai role yang berkaitan erat dengan:
+
+- model development
+- data pipeline interaction
+- metrics interpretation
+- training
+- retraining
+- deployment
+- scheduling
+- monitoring
+- improvement
+- scalable ML solutions [3]
+
+---
+
+# 4. The Simplest Difference
+
+Secara sederhana:
+
+```text
+AI Engineer
+= "Bagaimana saya membangun produk/sistem yang menggunakan AI?"
+
+ML Engineer
+= "Bagaimana saya membuat model ML bekerja dengan baik dan reliable di production?"
+```
+
+Namun ini hanya mental model awal.
+
+Di perusahaan nyata, keduanya dapat mengerjakan pekerjaan yang sama.
+
+---
+
+# 5. AI Engineer Focus
+
+AI Engineer cenderung berfokus pada **AI-powered applications**.
+
+Contoh:
+
+```text
+User
+ ↓
+Web Application
+ ↓
+AI Service
+ ↓
+LLM
+ ↓
+RAG
+ ↓
+Database
+ ↓
+Response
+```
+
+Tugasnya dapat mencakup:
+
+- membangun AI feature
+- mengintegrasikan LLM
+- membuat chatbot
+- membangun RAG
+- membuat AI Agent
+- membuat API
+- menghubungkan AI dengan database
+- mengintegrasikan external tools
+- melakukan evaluation
+- deployment
+- monitoring
+- optimization
+
+---
+
+# 6. ML Engineer Focus
+
+ML Engineer cenderung berfokus pada **ML lifecycle dan productionization**.
+
+Contoh:
+
+```text
+Data
+ ↓
+Training Pipeline
+ ↓
+Model
+ ↓
+Validation
+ ↓
+Model Registry
+ ↓
+Deployment
+ ↓
+Monitoring
+ ↓
+Retraining
+```
+
+Tugasnya dapat mencakup:
+
+- membangun training pipeline
+- model training
+- model evaluation
+- hyperparameter tuning
+- model deployment
+- model versioning
+- feature/data pipeline
+- model monitoring
+- data drift monitoring
+- retraining
+- scaling
+- MLOps
+
+---
+
+# 7. Main Comparison
+
+| Aspek                | AI Engineer              | ML Engineer                      |
+| -------------------- | ------------------------ | -------------------------------- |
+| Fokus                | AI application & systems | ML models & production lifecycle |
+| Machine Learning     | Penting                  | Sangat penting                   |
+| Deep Learning        | Penting                  | Sangat penting                   |
+| LLM                  | Sangat relevan           | Semakin relevan                  |
+| RAG                  | Sangat relevan           | Bisa relevan                     |
+| AI Agent             | Sangat relevan           | Bisa relevan                     |
+| Training             | Tergantung role          | Sangat umum                      |
+| Model Deployment     | Penting                  | Sangat penting                   |
+| API                  | Sangat penting           | Penting                          |
+| Backend              | Sangat penting           | Penting                          |
+| MLOps                | Penting                  | Sangat penting                   |
+| Model Monitoring     | Penting                  | Sangat penting                   |
+| Product Integration  | Sangat penting           | Penting                          |
+| Software Engineering | Sangat penting           | Sangat penting                   |
+
+---
+
+# 8. Example 1 — Traditional Machine Learning
+
+Perusahaan ingin:
+
+> Memprediksi customer yang akan berhenti berlangganan.
+
+Pipeline:
+
+```text
+Customer Data
+     ↓
+Data Processing
+     ↓
+Feature Engineering
+     ↓
+Training
+     ↓
+XGBoost
+     ↓
+Evaluation
+     ↓
+Best Model
+     ↓
+Deployment
+     ↓
+Prediction
+```
+
+### ML Engineer
+
+Dapat mengerjakan:
+
+```text
+Dataset
+ ↓
+Feature Pipeline
+ ↓
+Training Pipeline
+ ↓
+Model
+ ↓
+Deployment
+ ↓
+Monitoring
+```
+
+### AI Engineer
+
+Dapat mengerjakan:
+
+```text
+Prediction API
+ ↓
+Backend
+ ↓
+Application
+ ↓
+User Interface
+```
+
+Kedua role dapat bekerja pada project yang sama.
+
+---
+
+# 9. Example 2 — LLM Application
+
+Perusahaan ingin membuat:
+
+> Chatbot customer support.
+
+Architecture:
+
+```text
+Customer
+    ↓
+Chat Interface
+    ↓
+Backend
+    ↓
+AI Service
+    ├── LLM
+    ├── RAG
+    └── Tools
+    ↓
+Response
+```
+
+### AI Engineer
+
+Fokus dapat meliputi:
+
+```text
+Prompt
+RAG
+LLM
+Tool Calling
+API
+Application Integration
+Evaluation
+```
+
+### ML Engineer
+
+Dapat terlibat pada:
+
+```text
+Model Serving
+Inference Infrastructure
+Scaling
+Evaluation Pipeline
+Monitoring
+Optimization
+```
+
+Tetapi tidak semua perusahaan akan membagi pekerjaan seperti ini.
+
+---
+
+# 10. Example 3 — RAG System
+
+Sebuah perusahaan mempunyai 100.000 dokumen internal.
+
+Tujuan:
+
+> Membuat chatbot yang menjawab pertanyaan berdasarkan dokumen internal.
+
+Architecture:
+
+```text
+Documents
+    ↓
+Parser
+    ↓
+Chunking
+    ↓
+Embedding
+    ↓
+Vector Database
+```
+
+Ketika user bertanya:
+
+```text
+User Question
+     ↓
+Embedding
+     ↓
+Vector Search
+     ↓
+Relevant Documents
+     ↓
+LLM
+     ↓
+Answer
+```
+
+### AI Engineer
+
+Dapat fokus pada:
+
+- chunking strategy
+- embedding
+- retrieval
+- prompt
+- LLM
+- API
+- application
+- UX
+- evaluation
+
+### ML Engineer
+
+Dapat fokus pada:
+
+- scalable embedding pipeline
+- inference infrastructure
+- model serving
+- deployment
+- monitoring
+- optimization
+- production reliability
+
+---
+
+# 11. Example 4 — AI Agent
+
+Sistem:
+
+> Agent yang dapat mencari lowongan kerja dan menganalisis CV.
+
+Architecture:
+
+```text
+                    AI AGENT
+
+User
+ ↓
+Agent
+ ├── CV Parser
+ ├── Job Search API
+ ├── Database
+ ├── LLM
+ └── Matching Service
+```
+
+Workflow:
+
+```text
+User
+ ↓
+"Carikan lowongan AI Engineer"
+ ↓
+Agent
+ ↓
+Search Tool
+ ↓
+Job Results
+ ↓
+Analyze
+ ↓
+Return Recommendation
+```
+
+AI Engineer mungkin lebih banyak menangani:
+
+```text
+Agent Logic
+Tool Integration
+LLM
+Prompt
+RAG
+Application
+API
+```
+
+ML Engineer dapat menangani:
+
+```text
+Model Serving
+Inference
+Performance
+Scaling
+Infrastructure
+Evaluation
+```
+
+---
+
+# 12. Model Development vs Application Development
+
+Perbedaan yang sangat berguna untuk dipahami:
+
+```text
+              AI / ML SYSTEM
+                    │
+        ┌───────────┴───────────┐
+        ↓                       ↓
+   Model Layer            Application Layer
+        │                       │
+        ↓                       ↓
+   Training                 Backend
+   Evaluation               API
+   Inference                Frontend
+   Optimization             Business Logic
+        │                       │
+        └───────────┬───────────┘
+                    ↓
+                Production
+```
+
+ML Engineer sering lebih dekat dengan:
+
+```text
+Model Layer
++
+ML Infrastructure
+```
+
+AI Engineer sering lebih dekat dengan:
+
+```text
+Application Layer
++
+AI Integration
+```
+
+Namun keduanya tetap overlap.
+
+---
+
+# 13. Training
+
+Training adalah proses membuat model belajar dari data.
+
+Contoh:
+
+```text
+Training Dataset
+       ↓
+Algorithm
+       ↓
+Model Parameters
+       ↓
+Trained Model
+```
+
+ML Engineer umumnya lebih sering terlibat dalam:
+
+- training pipeline
+- distributed training
+- hyperparameter tuning
+- experiment tracking
+- validation
+
+AI Engineer dapat terlibat juga jika pekerjaannya memang mencakup model development.
+
+---
+
+# 14. Inference
+
+Inference adalah penggunaan model yang sudah dilatih untuk menghasilkan output.
+
+```text
+New Input
+    ↓
+Trained Model
+    ↓
+Prediction
+```
+
+Contoh:
+
+```text
+Image
+ ↓
+Vision Model
+ ↓
+"Cat"
+```
+
+atau:
+
+```text
+User Question
+ ↓
+LLM
+ ↓
+Answer
+```
+
+AI Engineer sering banyak berinteraksi dengan inference API.
+
+ML Engineer lebih banyak memikirkan bagaimana inference berjalan secara reliable dan scalable.
+
+---
+
+# 15. API Responsibility
+
+AI Engineer dapat membangun:
+
+```text
+POST /predict
+```
+
+atau:
+
+```text
+POST /chat
+```
+
+Architecture:
+
+```text
+Frontend
+   ↓
+Backend
+   ↓
+AI API
+   ↓
+Model
+```
+
+Contoh:
+
+```json
+{
+  "question": "Apa itu machine learning?"
+}
+```
+
+Response:
+
+```json
+{
+  "answer": "Machine learning adalah..."
+}
+```
+
+Kemampuan API sangat penting bagi AI Engineer karena AI harus diintegrasikan ke sistem lain.
+
+---
+
+# 16. Deployment Responsibility
+
+ML Engineer sering memiliki tanggung jawab besar terhadap productionization model.
+
+Contoh:
+
+```text
+Model
+ ↓
+Container
+ ↓
+Model Server
+ ↓
+Cloud
+ ↓
+Production
+```
+
+Yang perlu diperhatikan:
+
+- scalability
+- latency
+- reliability
+- resource usage
+- model version
+- rollback
+- monitoring
+
+AI Engineer juga dapat menangani deployment, terutama ketika role tersebut mencakup full AI application.
+
+---
+
+# 17. MLOps
+
+MLOps sangat dekat dengan ML Engineering.
+
+Secara sederhana:
+
+```text
+Machine Learning
+       +
+Operations
+       +
+Automation
+```
+
+Pipeline:
+
+```text
+Data
+ ↓
+Training
+ ↓
+Evaluation
+ ↓
+Model Registry
+ ↓
+Deployment
+ ↓
+Monitoring
+ ↓
+Retraining
+```
+
+Google Cloud menempatkan ML Engineer sebagai role yang mengoperasionalkan dan menskalakan model ML untuk deployment. [2]
+
+---
+
+# 18. Model Monitoring
+
+Model dapat bekerja dengan baik saat training tetapi menurun setelah deployment.
+
+Contoh:
+
+```text
+Training Performance
+       ↓
+Excellent
+```
+
+Kemudian production:
+
+```text
+Production Data
+       ↓
+Distribution Changes
+       ↓
+Prediction Quality Decreases
+```
+
+ML Engineer perlu membantu memastikan hal tersebut dapat dideteksi.
+
+Monitoring dapat meliputi:
+
+```text
+Model Performance
+Data Drift
+Prediction Drift
+Latency
+Errors
+Resource Usage
+```
+
+---
+
+# 19. Data Drift
+
+Misalnya model dilatih menggunakan:
+
+```text
+Average Customer Age = 25
+```
+
+Tetapi setelah satu tahun:
+
+```text
+Average Customer Age = 40
+```
+
+Distribusi data berubah.
+
+```text
+Training Distribution
+        ↓
+        A
+
+Production Distribution
+        ↓
+        B
+```
+
+Model dapat mengalami penurunan performa.
+
+Ini merupakan salah satu masalah yang penting dalam production ML.
+
+---
+
+# 20. Model Versioning
+
+ML Engineer dapat mengelola:
+
+```text
+Model v1
+Model v2
+Model v3
+```
+
+Contoh:
+
+```text
+Model v1
+RMSE = 650
+
+Model v2
+RMSE = 580
+
+Model v3
+RMSE = 510
+```
+
+Versioning membantu:
+
+- rollback
+- comparison
+- reproducibility
+- debugging
+- audit
+
+---
+
+# 21. AI Engineer and Model APIs
+
+AI Engineer sering tidak perlu membuat model dari nol.
+
+Misalnya menggunakan:
+
+```text
+LLM API
+Vision API
+Speech API
+Embedding API
+```
+
+Pipeline:
+
+```text
+Application
+    ↓
+API
+    ↓
+AI Model Provider
+    ↓
+Response
+```
+
+Kemampuan penting:
+
+- API authentication
+- request handling
+- response parsing
+- error handling
+- retries
+- rate limiting
+- caching
+- logging
+
+---
+
+# 22. Build vs Use Existing Model
+
+Ini adalah salah satu perbedaan mindset penting.
+
+ML Engineer:
+
+> "Bagaimana saya mengembangkan dan productionize model?"
+
+AI Engineer:
+
+> "Model apa yang paling tepat untuk menyelesaikan masalah produk?"
+
+Pilihan AI Engineer dapat berupa:
+
+```text
+Train From Scratch
+        ↓
+Fine-Tune
+        ↓
+Existing Open-Source Model
+        ↓
+Managed Model
+        ↓
+API Provider
+```
+
+Keputusan tergantung:
+
+- data
+- budget
+- latency
+- privacy
+- performance
+- control
+- maintenance
+
+---
+
+# 23. LLM Has Changed the Role Landscape
+
+Dulu pembagian sederhana dapat terlihat seperti:
+
+```text
+Data Scientist
+      ↓
+ML Engineer
+```
+
+Kemudian berkembang:
+
+```text
+Data Scientist
+      ↓
+ML Engineer
+      ↓
+AI Engineer
+```
+
+Tetapi Generative AI membuat batas tersebut semakin kabur.
+
+ML Engineer modern juga dapat:
+
+- menggunakan foundation models
+- membangun generative AI solution
+- bekerja dengan LLM
+- mengoperasionalkan agentic AI
+- mengelola AI infrastructure
+
+AWS pada pembaruan sertifikasi ML Engineer 2026 secara eksplisit menyebut bahwa role ML Engineer kini berkembang hingga mencakup generative AI, foundation models, LLM, agentic AI workflows, dan operationalization AI at scale. [4]
+
+Artinya:
+
+> Jangan memilih karier hanya berdasarkan nama jabatan.
+
+Pelajari job description-nya.
+
+---
+
+# 24. Job Title Is Not a Standard
+
+Dua perusahaan dapat menggunakan nama yang sama dengan pekerjaan berbeda.
+
+### Company A
+
+```text
+AI Engineer
+
+Responsibilities:
+- RAG
+- LLM
+- Prompt Engineering
+- Agents
+- APIs
+```
+
+### Company B
+
+```text
+AI Engineer
+
+Responsibilities:
+- PyTorch
+- Model Training
+- Computer Vision
+- Model Deployment
+```
+
+Keduanya disebut:
+
+```text
+AI Engineer
+```
+
+Tetapi pekerjaannya berbeda.
+
+Begitu juga ML Engineer.
+
+### Company C
+
+```text
+ML Engineer
+
+Responsibilities:
+- XGBoost
+- Feature Engineering
+- Training Pipeline
+- MLOps
+```
+
+### Company D
+
+```text
+ML Engineer
+
+Responsibilities:
+- LLM
+- Fine-tuning
+- Model Serving
+- Agentic AI
+```
+
+Karena itu:
+
+> **Job description lebih penting daripada job title.**
+
+---
+
+# 25. Skill Comparison
+
+## AI Engineer
+
+Prioritas skill:
+
+```text
+Python
+   ↓
+Software Engineering
+   ↓
+API
+   ↓
+Machine Learning Fundamentals
+   ↓
+LLM
+   ↓
+RAG
+   ↓
+Agents
+   ↓
+Deployment
+```
+
+---
+
+## ML Engineer
+
+Prioritas skill:
+
+```text
+Python
+   ↓
+Machine Learning
+   ↓
+Statistics
+   ↓
+Model Development
+   ↓
+Evaluation
+   ↓
+Data Pipeline
+   ↓
+MLOps
+   ↓
+Deployment
+   ↓
+Monitoring
+```
+
+---
+
+# 26. Shared Skills
+
+Ada banyak skill yang harus dikuasai keduanya.
+
+```text
+                SHARED SKILLS
+
+             Python
+                │
+        ┌───────┼────────┐
+        ↓       ↓        ↓
+       ML      Git      SQL
+        ↓       ↓        ↓
+       DL      API     Docker
+        ↓       ↓        ↓
+    Evaluation Cloud  Deployment
+```
+
+Semakin senior seseorang, overlap biasanya semakin besar.
+
+---
+
+# 27. Mathematics Requirement
+
+Keduanya membutuhkan matematika.
+
+Terutama:
+
+```text
+Linear Algebra
+Probability
+Statistics
+Calculus
+```
+
+Namun kedalaman yang dibutuhkan tergantung pekerjaan.
+
+### ML Engineer
+
+Biasanya lebih sering membutuhkan pemahaman:
+
+- optimization
+- loss functions
+- model behavior
+- statistics
+- experiment design
+
+### AI Engineer
+
+Perlu memahami dasar matematika agar dapat memahami model, tetapi tidak selalu harus melakukan research-level mathematical derivation.
+
+---
+
+# 28. Software Engineering Requirement
+
+Keduanya membutuhkan software engineering.
+
+AI Engineer:
+
+```text
+Software Engineering
+      +
+AI
+```
+
+ML Engineer:
+
+```text
+Software Engineering
+      +
+Machine Learning
+```
+
+Kemampuan penting:
+
+- clean code
+- Git
+- testing
+- API
+- database
+- Docker
+- CI/CD
+- logging
+- monitoring
+- system design
+
+---
+
+# 29. Data Engineering Relationship
+
+Data Engineer:
+
+```text
+Data Source
+   ↓
+Data Pipeline
+   ↓
+Data Warehouse / Lake
+```
+
+ML Engineer:
+
+```text
+Data
+ ↓
+ML Pipeline
+ ↓
+Model
+```
+
+AI Engineer:
+
+```text
+Data
+ ↓
+AI Application
+```
+
+Namun di perusahaan kecil, satu engineer dapat menangani ketiganya.
+
+---
+
+# 30. Example Architecture — Traditional ML
+
+```text
+                MACHINE LEARNING SYSTEM
+
+Data Source
+    ↓
+Data Pipeline
+    ↓
+Feature Engineering
+    ↓
+Training Pipeline
+    ↓
+Model Registry
+    ↓
+Model
+    ↓
+Inference Service
+    ↓
+Application
+```
+
+Area ML Engineer:
+
+```text
+       ┌─────────────────────┐
+       │     ML Engineer     │
+       │                     │
+       │ Data Pipeline       │
+       │ Training            │
+       │ Evaluation          │
+       │ Model Registry      │
+       │ Deployment          │
+       │ Monitoring          │
+       └─────────────────────┘
+```
+
+---
+
+# 31. Example Architecture — LLM Application
+
+```text
+                 LLM APPLICATION
+
+User
+ ↓
+Frontend
+ ↓
+Backend
+ ↓
+AI Orchestrator
+ ├── LLM
+ ├── RAG
+ ├── Vector DB
+ ├── Tools
+ └── External APIs
+ ↓
+Response
+```
+
+Area AI Engineer:
+
+```text
+       ┌─────────────────────┐
+       │     AI Engineer     │
+       │                     │
+       │ LLM                 │
+       │ RAG                 │
+       │ Agent               │
+       │ Tools               │
+       │ API                 │
+       │ Integration         │
+       │ Evaluation          │
+       └─────────────────────┘
+```
+
+ML Engineer masih dapat terlibat pada:
+
+```text
+Model Serving
+Infrastructure
+Evaluation Pipeline
+Scaling
+Monitoring
+Optimization
+```
+
+---
+
+# 32. Who Builds the Model?
+
+Pertanyaan:
+
+> "Apakah AI Engineer selalu membuat model?"
+
+Jawaban:
+
+**Tidak.**
+
+AI Engineer dapat:
+
+```text
+Use Existing Model
+        OR
+Fine-tune Model
+        OR
+Train Model
+```
+
+Bergantung kebutuhan.
+
+Contoh:
+
+### RAG
+
+Tidak perlu melatih LLM dari nol.
+
+```text
+Existing LLM
+    +
+Company Documents
+    ↓
+RAG
+```
+
+### Classification
+
+Mungkin cukup:
+
+```text
+XGBoost
+Random Forest
+Logistic Regression
+```
+
+### Custom Computer Vision
+
+Mungkin membutuhkan:
+
+```text
+Fine-tuned Vision Model
+```
+
+---
+
+# 33. Who Deploys the Model?
+
+Tidak selalu satu role.
+
+Kemungkinan:
+
+```text
+Data Scientist
+      ↓
+Develop Model
+
+ML Engineer
+      ↓
+Productionize Model
+
+AI Engineer
+      ↓
+Integrate into Application
+
+DevOps / Platform
+      ↓
+Infrastructure
+```
+
+Dalam startup:
+
+```text
+ONE ENGINEER
+   ↓
+Do Everything
+```
+
+---
+
+# 34. Who Works with LLM?
+
+AI Engineer semakin sering bekerja langsung dengan LLM.
+
+Contoh:
+
+```text
+LLM
+ ↓
+Prompt
+ ↓
+Structured Output
+ ↓
+RAG
+ ↓
+Tools
+ ↓
+Agents
+```
+
+Tetapi ML Engineer modern juga dapat bekerja dengan:
+
+```text
+Foundation Model
+LLM
+Fine-tuning
+Inference
+Evaluation
+Serving
+```
+
+Jadi sekali lagi:
+
+> LLM bukan pembatas absolut antara kedua role.
+
+---
+
+# 35. AI Engineer and ML Engineer in a Team
+
+Misalnya perusahaan memiliki tim:
+
+```text
+                    Product
+                       │
+              ┌────────┴────────┐
+              ↓                 ↓
+        AI Engineer        ML Engineer
+              │                 │
+              ↓                 ↓
+        AI Application      ML Platform
+              │                 │
+              └────────┬────────┘
+                       ↓
+                   Production
+```
+
+AI Engineer:
+
+```text
+User-facing AI
+Application
+Workflow
+Integration
+```
+
+ML Engineer:
+
+```text
+Model Lifecycle
+ML Infrastructure
+Production ML
+```
+
+Keduanya bekerja sama.
+
+---
+
+# 36. Career Path
+
+Tidak ada satu jalur universal.
+
+Contoh jalur:
+
+```text
+Software Engineer
+       ↓
+Python
+       ↓
+ML Fundamentals
+       ↓
+LLM
+       ↓
+RAG
+       ↓
+AI Agent
+       ↓
+AI Engineer
+```
+
+Jalur lain:
+
+```text
+Data Scientist
+       ↓
+Machine Learning
+       ↓
+MLOps
+       ↓
+ML Engineer
+```
+
+Atau:
+
+```text
+ML Engineer
+       ↓
+Generative AI
+       ↓
+LLM
+       ↓
+AI Engineer
+```
+
+---
+
+# 37. Which Path Fits a Software Engineer?
+
+Untuk seseorang yang sudah memiliki background software engineering:
+
+```text
+Software Engineering
+        ↓
+Python
+        ↓
+ML Fundamentals
+        ↓
+LLM
+        ↓
+RAG
+        ↓
+AI Agents
+        ↓
+AI Application
+        ↓
+Production
+```
+
+Jalur tersebut relatif natural.
+
+Karena sudah memiliki fondasi:
+
+```text
+Programming
+Backend
+API
+Database
+Git
+Docker
+Deployment
+```
+
+Maka waktu belajar dapat lebih banyak digunakan untuk:
+
+```text
+AI / ML
+```
+
+---
+
+# 38. Which Path Fits Someone Who Loves Modeling?
+
+Jika seseorang sangat menyukai:
+
+- mathematics
+- statistics
+- experiments
+- model architecture
+- optimization
+- training
+- model performance
+
+maka ML Engineering dapat menjadi fokus yang kuat.
+
+Roadmap:
+
+```text
+Mathematics
+    ↓
+Statistics
+    ↓
+Machine Learning
+    ↓
+Deep Learning
+    ↓
+Model Optimization
+    ↓
+MLOps
+    ↓
+ML Engineer
+```
+
+---
+
+# 39. Which Path Fits Someone Who Loves Building Products?
+
+Jika seseorang lebih suka:
+
+- coding aplikasi
+- backend
+- API
+- product development
+- AI integration
+- LLM
+- RAG
+- Agents
+- deployment
+
+maka AI Engineering / Applied AI dapat lebih cocok.
+
+Roadmap:
+
+```text
+Software Engineering
+       ↓
+Python
+       ↓
+ML Fundamentals
+       ↓
+LLM
+       ↓
+RAG
+       ↓
+Agents
+       ↓
+AI Applications
+       ↓
+Deployment
+```
+
+---
+
+# 40. AI Engineer Does Not Mean Less Technical
+
+Kesalahpahaman lain:
+
+> "Kalau AI Engineer cuma menggunakan API berarti lebih mudah."
+
+Tidak selalu.
+
+Membangun production AI application dapat membutuhkan:
+
+```text
+LLM
++
+RAG
++
+Vector DB
++
+Agent
++
+API
++
+Database
++
+Caching
++
+Security
++
+Monitoring
++
+Evaluation
++
+Deployment
+```
+
+Kompleksitas dapat sangat tinggi.
+
+---
+
+# 41. ML Engineer Does Not Mean Only Training Models
+
+Kesalahpahaman:
+
+> "ML Engineer hanya training model."
+
+Tidak tepat.
+
+ML Engineer modern dapat bertanggung jawab terhadap:
+
+```text
+Data
+ ↓
+Training
+ ↓
+Evaluation
+ ↓
+Deployment
+ ↓
+Monitoring
+ ↓
+Scaling
+ ↓
+Retraining
+```
+
+Google Cloud menekankan bahwa ML Engineer mencakup pengembangan, productionization, deployment, monitoring, dan maintenance sistem ML. [3]
+
+AWS juga menyatakan pada 2026 bahwa role ML Engineer telah meluas ke Generative AI dan agentic AI workflows. [4]
+
+---
+
+# 42. Important Overlap
+
+Lebih tepat menggambarkan kedua role seperti:
+
+```text
+              AI Engineering
+                    │
+          ┌─────────┴─────────┐
+          ↓                   ↓
+    AI Applications       ML Systems
+          │                   │
+          │    OVERLAP        │
+          └───────┬───────────┘
+                  ↓
+         Production AI/ML
+```
+
+Overlap dapat meliputi:
+
+- Python
+- Machine Learning
+- Deep Learning
+- APIs
+- Cloud
+- Docker
+- Deployment
+- Evaluation
+- Monitoring
+- MLOps
+- LLM
+
+---
+
+# 43. Decision Framework
+
+Jangan memilih role hanya dengan bertanya:
+
+> "Mana yang lebih bagus?"
+
+Tanyakan:
+
+### Apakah saya lebih suka:
+
+```text
+Build Applications?
+```
+
+atau:
+
+```text
+Build / Operate ML Systems?
+```
+
+### Apakah saya lebih tertarik:
+
+```text
+LLM
+RAG
+Agents
+```
+
+atau:
+
+```text
+Training
+Optimization
+Pipelines
+MLOps
+```
+
+### Apakah saya ingin:
+
+```text
+Product-oriented
+```
+
+atau:
+
+```text
+Model / Infrastructure-oriented
+```
+
+---
+
+# 44. A Practical Comparison
+
+Misalnya ada project:
+
+> "Buat sistem rekomendasi produk."
+
+### AI Engineer
+
+Mungkin fokus:
+
+```text
+User Experience
+Recommendation API
+AI Integration
+Application
+Product Logic
+```
+
+### ML Engineer
+
+Mungkin fokus:
+
+```text
+Recommendation Model
+Training Pipeline
+Model Evaluation
+Deployment
+Monitoring
+```
+
+### Data Scientist
+
+Mungkin fokus:
+
+```text
+Exploratory Analysis
+Experiment
+Model Selection
+Business Insight
+```
+
+### Data Engineer
+
+Mungkin fokus:
+
+```text
+Data Pipeline
+Data Warehouse
+Data Availability
+Data Quality
+```
+
+### Software Engineer
+
+Mungkin fokus:
+
+```text
+Backend
+Frontend
+Database
+Application Infrastructure
+```
+
+---
+
+# 45. Example Using My Own Background
+
+Dengan background saya:
+
+```text
+Laravel
+PHP
+Python
+REST API
+PostgreSQL
+Git
+Docker
+Web Scraping
+Machine Learning
+Deep Learning
+```
+
+Saya sudah memiliki fondasi software engineering yang kuat.
+
+Maka saya tidak perlu:
+
+```text
+Start From Zero
+```
+
+Saya dapat menggunakan:
+
+```text
+Existing Software Engineering Skills
+             ↓
+Python for AI
+             ↓
+ML Fundamentals
+             ↓
+Deep Learning
+             ↓
+LLM
+             ↓
+RAG
+             ↓
+AI Agents
+             ↓
+Production AI
+```
+
+---
+
+# 46. My Target Role
+
+Target:
+
+> **AI Engineer / Applied AI Engineer**
+
+Bukan berarti saya harus mengabaikan Machine Learning Engineering.
+
+Justru saya perlu memahami ML Engineering karena AI system production membutuhkan:
+
+```text
+Model
++
+Inference
++
+Deployment
++
+Monitoring
+```
+
+Target skill saya:
+
+```text
+              AI ENGINEER
+                   │
+        ┌──────────┼──────────┐
+        ↓          ↓          ↓
+      AI/ML     Software    Production
+        │       Engineering    │
+        ↓          ↓           ↓
+      LLM         API         Docker
+      RAG         SQL         Cloud
+     Agents       Git         MLOps
+        │          │          Monitoring
+        └──────────┼──────────┘
+                   ↓
+             AI Application
+```
+
+---
+
+# 47. What I Should Prioritize
+
+Berdasarkan background software engineering saya:
+
+## Priority 1 — Python
+
+```text
+Python
+NumPy
+Pandas
+Scikit-learn
+```
+
+## Priority 2 — ML Fundamentals
+
+```text
+Regression
+Classification
+Clustering
+Evaluation
+Feature Engineering
+```
+
+## Priority 3 — Deep Learning
+
+```text
+Neural Network
+CNN
+RNN
+LSTM
+GRU
+Transformer
+```
+
+## Priority 4 — Modern AI
+
+```text
+LLM
+Embeddings
+Prompt Engineering
+RAG
+Vector Database
+Agents
+Tools
+MCP
+```
+
+## Priority 5 — Production
+
+```text
+FastAPI
+Docker
+Cloud
+CI/CD
+Monitoring
+MLOps
+```
+
+---
+
+# 48. What I Do NOT Need to Learn Immediately
+
+Tidak semua teknologi harus dipelajari dari awal.
+
+Misalnya video lama dapat menyebut:
+
+```text
+Hadoop
+Cassandra
+Theano
+Caffe
+```
+
+Teknologi tersebut dapat berguna dalam konteks tertentu, tetapi tidak perlu menjadi prioritas awal untuk roadmap saya.
+
+Prioritas saya adalah:
+
+```text
+Python
+ ↓
+ML
+ ↓
+DL
+ ↓
+LLM
+ ↓
+RAG
+ ↓
+Agents
+ ↓
+Production
+```
+
+Tool dapat berubah.
+
+Fundamental lebih penting.
+
+---
+
+# 49. Important Principle
+
+> **Learn concepts first, tools second.**
+
+Contoh:
+
+Jangan hanya belajar:
+
+```text
+LangChain
+```
+
+Pelajari:
+
+```text
+Agent
+Tool Calling
+Retrieval
+Context
+Memory
+Orchestration
+```
+
+Kemudian baru pelajari framework yang mengimplementasikannya.
+
+Begitu juga:
+
+Jangan hanya belajar:
+
+```text
+Docker
+```
+
+Pahami:
+
+```text
+Containerization
+Deployment
+Isolation
+Reproducibility
+Scaling
+```
+
+Kemudian gunakan Docker sebagai tool.
+
+---
+
+# 50. Common Mistakes
+
+## Mistake 1
+
+Menganggap:
+
+```text
+AI Engineer = ML Engineer
+```
+
+Tidak selalu.
+
+---
+
+## Mistake 2
+
+Menganggap:
+
+```text
+AI Engineer = Prompt Engineer
+```
+
+Tidak.
+
+AI Engineering mencakup software engineering, AI integration, evaluation, deployment, dan production systems.
+
+---
+
+## Mistake 3
+
+Menganggap:
+
+```text
+ML Engineer = Train Model
+```
+
+Tidak.
+
+Productionization dan operations merupakan bagian penting.
+
+---
+
+## Mistake 4
+
+Memilih karier berdasarkan title.
+
+Lebih baik melihat:
+
+```text
+Job Title
++
+Responsibilities
++
+Required Skills
++
+Tech Stack
+```
+
+---
+
+# 51. Interview Perspective
+
+Pertanyaan interview yang mungkin muncul:
+
+### Q1
+
+> Apa perbedaan AI Engineer dan ML Engineer?
+
+Jawaban sederhana:
+
+> AI Engineer umumnya berfokus lebih luas pada pembangunan aplikasi dan sistem berbasis AI, sedangkan ML Engineer lebih menekankan pengembangan, productionization, deployment, dan operasi machine learning systems. Namun keduanya banyak overlap dan definisinya dapat berbeda antar perusahaan.
+
+---
+
+### Q2
+
+> Apakah AI Engineer harus bisa training model?
+
+Jawaban:
+
+> Tergantung role. AI Engineer perlu memahami konsep training, tetapi tidak semua posisi mengharuskan training model dari nol. Banyak AI Engineer menggunakan existing models, fine-tuning, atau AI APIs lalu mengintegrasikannya ke aplikasi.
+
+---
+
+### Q3
+
+> Apakah ML Engineer harus bisa LLM?
+
+Jawaban:
+
+> Tidak selalu untuk setiap posisi, tetapi Generative AI, foundation models, dan LLM semakin menjadi bagian dari ML Engineering modern.
+
+---
+
+### Q4
+
+> Mengapa software engineering penting bagi AI Engineer?
+
+Jawaban:
+
+> Karena model AI harus diintegrasikan ke aplikasi, API, database, infrastructure, deployment, dan monitoring agar dapat digunakan di production.
+
+---
+
+# 52. Final Mental Model
+
+Saya harus mengingat:
+
+```text
+AI ENGINEER
+
+Problem
+ ↓
+AI Solution
+ ↓
+Application
+ ↓
+Integration
+ ↓
+Deployment
+ ↓
+Production
+```
+
+Sedangkan:
+
+```text
+ML ENGINEER
+
+Problem
+ ↓
+Data
+ ↓
+ML Model
+ ↓
+Training
+ ↓
+Evaluation
+ ↓
+Productionization
+ ↓
+Deployment
+ ↓
+Monitoring
+```
+
+Tetapi:
+
+```text
+        ┌─────────────────────────┐
+        │        OVERLAP          │
+        │                         │
+        │ ML + AI + Software +   │
+        │ Deployment + Monitoring │
+        │                         │
+        └─────────────────────────┘
+```
+
+---
+
+# 53. Key Takeaways
+
+1. AI Engineer dan ML Engineer memiliki banyak skill yang sama.
+
+2. AI Engineer cenderung memiliki fokus lebih luas pada pembangunan aplikasi dan sistem berbasis AI.
+
+3. ML Engineer cenderung lebih fokus pada lifecycle machine learning, productionization, deployment, dan operasi model.
+
+4. Perbedaan tersebut bukan aturan universal.
+
+5. Job description lebih penting daripada job title.
+
+6. AI Engineer dapat menggunakan existing models, fine-tuned models, maupun custom models.
+
+7. ML Engineer modern juga dapat bekerja dengan:
+
+```text
+Generative AI
+Foundation Models
+LLMs
+Agentic AI
+```
+
+8. Software Engineering sangat penting untuk kedua role.
+
+9. AI application membutuhkan lebih dari sekadar model.
+
+10. Production AI membutuhkan:
+
+```text
+Deployment
+Monitoring
+Evaluation
+Security
+Scaling
+Cost Management
+```
+
+11. Seseorang dengan background Software Engineering memiliki jalur yang natural menuju AI Engineering.
+
+12. Untuk saya, target yang masuk akal adalah:
+
+```text
+Software Engineer
+      ↓
+AI / ML
+      ↓
+LLM
+      ↓
+RAG
+      ↓
+Agents
+      ↓
+AI Engineer
+```
+
+---
+
+# 54. My Understanding
+
+> AI Engineer dan ML Engineer bukan dua role yang sepenuhnya terpisah.
+
+> AI Engineer biasanya lebih dekat dengan pembangunan AI-powered applications dan integrasi teknologi AI ke produk.
+
+> ML Engineer biasanya lebih dekat dengan pengembangan dan productionization machine learning systems, termasuk training, deployment, monitoring, dan scaling.
+
+> Namun perkembangan Generative AI membuat batas kedua role semakin kabur. ML Engineer modern juga dapat bekerja dengan LLM, foundation models, dan agentic AI.
+
+> Karena itu saya tidak seharusnya mengejar job title tertentu secara membabi buta. Saya harus melihat tanggung jawab dan skill yang diminta dalam job description.
+
+> Dengan background software engineering, backend, API, database, Git, Docker, Python, dan pengalaman ML/DL, saya memiliki fondasi yang cocok untuk mengembangkan karier menuju AI Engineer.
+
+---
+
+# 55. Questions I Should Be Able to Answer
+
+## Fundamental
+
+1. Apa perbedaan AI Engineer dan ML Engineer?
+2. Mengapa kedua role tersebut memiliki banyak overlap?
+3. Mengapa job title tidak cukup untuk menentukan pekerjaan sebenarnya?
+
+## AI Engineer
+
+4. Apa fokus utama AI Engineer?
+5. Apakah AI Engineer wajib training model?
+6. Apa hubungan AI Engineer dengan LLM?
+7. Apa hubungan AI Engineer dengan RAG?
+8. Apa hubungan AI Engineer dengan AI Agent?
+
+## ML Engineer
+
+9. Apa fokus utama ML Engineer?
+10. Apa yang dimaksud productionize model?
+11. Mengapa deployment penting bagi ML Engineer?
+12. Apa itu model monitoring?
+13. Apa itu data drift?
+14. Mengapa model versioning penting?
+
+## Software Engineering
+
+15. Mengapa software engineering penting untuk AI Engineer?
+16. Mengapa API penting?
+17. Mengapa Docker berguna dalam AI system?
+
+## Career
+
+18. Role mana yang lebih dekat dengan application development?
+19. Role mana yang lebih dekat dengan model lifecycle?
+20. Apakah seseorang dapat berpindah dari Software Engineer ke AI Engineer?
+21. Apakah AI Engineer dan ML Engineer dapat melakukan pekerjaan yang sama?
+
+---
+
+# 56. Mini Exercise
+
+## Exercise 1
+
+Sebuah perusahaan memiliki model XGBoost dan ingin menggunakannya pada aplikasi web.
+
+Tentukan siapa yang kemungkinan bertanggung jawab.
+
+```text
+Training Model
+→ ML Engineer / Data Scientist
+
+Build API
+→ AI Engineer / ML Engineer
+
+Integrate API with Web App
+→ AI Engineer / Software Engineer
+
+Deploy Model
+→ ML Engineer / AI Engineer / Platform Engineer
+
+Monitor Model
+→ ML Engineer / AI Engineer
+```
+
+Tidak ada jawaban tunggal karena pembagian kerja tergantung perusahaan.
+
+---
+
+## Exercise 2
+
+Sebuah perusahaan ingin membuat chatbot berdasarkan dokumen internal.
+
+Architecture:
+
+```text
+Documents
+ ↓
+Embedding
+ ↓
+Vector DB
+ ↓
+Retriever
+ ↓
+LLM
+ ↓
+Chatbot
+```
+
+Pertanyaan:
+
+> Role mana yang kemungkinan banyak mengerjakan bagian application dan AI integration?
+
+Jawaban:
+
+```text
+AI Engineer
+```
+
+Tetapi ML Engineer atau platform engineer juga dapat terlibat pada model serving, infrastructure, evaluation, dan scaling.
+
+---
+
+## Exercise 3
+
+Sebuah perusahaan memiliki model yang sangat akurat ketika training tetapi performanya menurun setelah beberapa bulan.
+
+Kemungkinan masalah:
+
+```text
+Data Drift
+```
+
+Engineer perlu:
+
+```text
+Monitor
+ ↓
+Detect Drift
+ ↓
+Evaluate
+ ↓
+Retrain
+ ↓
+Deploy
+```
+
+Area ini sangat dekat dengan ML Engineering dan MLOps.
+
+---
+
+# 57. Practical Project
+
+## Project: AI Prediction Service
+
+Bangun sistem:
+
+```text
+Laravel
+   ↓
+FastAPI
+   ↓
+ML Model
+   ↓
+Prediction
+```
+
+### AI Engineer
+
+Fokus:
+
+```text
+FastAPI
+API Contract
+Application Integration
+Error Handling
+```
+
+### ML Engineer
+
+Fokus:
+
+```text
+Model
+Inference
+Deployment
+Monitoring
+Performance
+```
+
+### Shared
+
+```text
+Python
+Docker
+Git
+Testing
+Evaluation
+```
+
+Project ini menunjukkan bahwa satu produk dapat membutuhkan kemampuan dari kedua role.
+
+---
+
+# 58. Career Roadmap
+
+Berdasarkan background saya:
+
+```text
+CURRENT
+
+Software Engineering
+Laravel
+PHP
+Python
+REST API
+PostgreSQL
+Git
+Docker
+        │
+        ↓
+STEP 1
+Python for AI
+        │
+        ↓
+STEP 2
+Machine Learning Fundamentals
+        │
+        ↓
+STEP 3
+Deep Learning
+        │
+        ↓
+STEP 4
+Transformer
+        │
+        ↓
+STEP 5
+LLM
+        │
+        ↓
+STEP 6
+RAG
+        │
+        ↓
+STEP 7
+AI Agents
+        │
+        ↓
+STEP 8
+FastAPI + AI Application
+        │
+        ↓
+STEP 9
+Deployment + MLOps
+        │
+        ↓
+TARGET
+
+AI Engineer / Applied AI Engineer
+```
+
+---
+
+# 59. Final Principle
+
+> Jangan belajar untuk menjadi "orang yang bisa menggunakan banyak tool".
+
+Tujuan saya adalah menjadi:
+
+> **Engineer yang mampu memilih teknologi AI yang tepat dan mengubahnya menjadi sistem yang benar-benar bekerja di production.**
+
+Tool hanyalah implementasi.
+
+```text
+Concept
+   ↓
+Problem
+   ↓
+Architecture
+   ↓
+Technology
+   ↓
+Implementation
+   ↓
+Production
+```
+
+---
+
+# 60. Next Topic
+
+Bagian **Introduction** telah selesai.
+
+Materi berikutnya masuk ke bagian fundamental:
+
+**Python for AI**
+
+Topik awal:
+
+```text
+Python Fundamentals
+      ↓
+NumPy
+      ↓
+Pandas
+      ↓
+Data Visualization
+      ↓
+Scikit-learn
+```
+
+Setelah fondasi Python siap, kita masuk ke Machine Learning.
+
+---
+
+# Sources
+
+## Primary Source
+
+1. Simply Learn — _How to Become an AI Engineer_
+   - YouTube video/transcript yang menjadi sumber awal roadmap.
+   - Digunakan untuk pengenalan role AI Engineer, skills, responsibilities, dan career path.
+
+## Official References
+
+2. Microsoft Learn — _Training for AI engineers_
+   - https://learn.microsoft.com/en-us/training/career-paths/ai-engineer
+   - Menjelaskan AI Engineer sebagai role yang menggabungkan software development, programming, data science, data engineering, model development, testing, dan implementasi AI applications.
+
+3. Google Cloud Documentation — _Predefined roles for job functions_
+   - https://docs.cloud.google.com/iam/docs/job-functions/roles-for-job-functions
+   - Menjelaskan ML Engineer sebagai role yang berspesialisasi dalam pengembangan ML serta operationalization dan scaling model untuk deployment.
+
+4. Google Cloud — _Common GKE user roles and tasks_
+   - https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/concepts/roles-tasks
+   - Digunakan untuk memperjelas peran ML Engineer pada deployment, post-production, governance, dan production ML.
+
+5. Google Cloud — _Professional Machine Learning Engineer_
+   - https://cloud.google.com/learn/certification/machine-learning-engineer
+   - Referensi mengenai model development, training, retraining, deployment, monitoring, optimization, dan maintenance.
+
+6. AWS Training and Certification — _Updates to AWS Certified Machine Learning Engineer – Associate (MLA-C02)_
+   - https://aws.amazon.com/blogs/training-and-certification/updates-to-aws-certified-machine-learning-engineer-associate-mla-c02/
+   - Referensi 2026 mengenai evolusi role ML Engineer yang semakin mencakup Generative AI, foundation models, LLMs, agentic AI workflows, dan AI operations at scale.
+
+7. Google Cloud — _Machine Learning Engineer Learning Path_
+   - https://docs.cloud.google.com/docs/ai-ml
+   - Referensi untuk pembelajaran ML engineering yang mencakup designing, building, productionalizing, optimizing, operating, dan maintaining ML systems.
+
+---
+
+# References for Further Learning
+
+- Microsoft Learn — AI Engineer Career Path
+- Google Cloud — Machine Learning Engineer Learning Path
+- Google Cloud — Professional Machine Learning Engineer
+- AWS — Machine Learning Engineer Certification
